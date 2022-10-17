@@ -95,6 +95,28 @@
   overflow: hidden;
 }
 
+.bg-home {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.svg-bg-home {
+  width: 150%;
+}
+@media screen and (min-width: 1440px) {
+  .svg-bg-home {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 960px) {
+  .svg-bg-home {
+    width: 150%;
+  }
+}
+
 .hero {
   height: 90vh;
 }
@@ -841,6 +863,76 @@ header {
   width: 100%;
 }
 
+.bg-icon-mobile::after {
+  background-image: url("../svg/icon-mobile.svg");
+  background-size: cover;
+  transition: 0.5s ease;
+  cursor: pointer;
+  filter: drop-shadow(0px 16px 24px rgba(169, 80, 196, 0.25));
+}
+.bg-icon-mobile:hover::after {
+  transform: scale(1.05);
+}
+
+.bg-icon-time::after {
+  background-image: url("../svg/icon-time.svg");
+  background-size: cover;
+  transition: 0.5s ease;
+  cursor: pointer;
+  filter: drop-shadow(0px 16px 24px rgba(169, 80, 196, 0.25));
+}
+.bg-icon-time:hover::after {
+  transform: scale(1.05);
+}
+
+.bg-icon-config::after {
+  background-image: url("../svg/icon-config.svg");
+  background-size: cover;
+  transition: 0.5s ease;
+  cursor: pointer;
+  filter: drop-shadow(0px 16px 24px rgba(169, 80, 196, 0.25));
+}
+.bg-icon-config:hover::after {
+  transform: scale(1.05);
+}
+
+.bg-icon-contactless::after {
+  background-image: url("../svg/icon-contactless.svg");
+  background-size: cover;
+  transition: 0.5s ease;
+  cursor: pointer;
+  filter: drop-shadow(0px 16px 24px rgba(169, 80, 196, 0.25));
+}
+.bg-icon-contactless:hover::after {
+  transform: scale(1.05);
+}
+
+.bg-icon-card::after {
+  background-image: url("../svg/icon-card.svg");
+  background-size: cover;
+  transition: 0.5s ease;
+  cursor: pointer;
+  filter: drop-shadow(0px 16px 24px rgba(169, 80, 196, 0.25));
+}
+.bg-icon-card:hover::after {
+  transform: scale(1.05);
+}
+
+.bg-icon-check::after {
+  background-image: url("../svg/icon-check.svg");
+  background-size: cover;
+  transition: 0.5s ease;
+  cursor: pointer;
+  filter: drop-shadow(0px 16px 24px rgba(169, 80, 196, 0.25));
+  width: 40px;
+  height: 40px;
+  top: 16px;
+  left: 8px;
+}
+.bg-icon-check:hover::after {
+  transform: scale(1.05);
+}
+
 .div-card {
   perspective: 500px;
   position: relative;
@@ -886,5 +978,132 @@ header {
   }
   100% {
     transform: rotateX(190deg) rotateY(10deg) rotate(15deg);
+  }
+}
+@-webkit-keyframes change-bg-card {
+  0%, 49% {
+    background-image: url("../svg/nubank.svg");
+    background-size: cover;
+  }
+  50%, 100% {
+    background-image: url("../svg/nubank-verse.svg");
+    background-size: cover;
+  }
+}
+@keyframes change-bg-card {
+  0%, 49% {
+    background-image: url("../svg/nubank.svg");
+    background-size: cover;
+  }
+  50%, 100% {
+    background-image: url("../svg/nubank-verse.svg");
+    background-size: cover;
+  }
+}
+.icon-card-hero {
+  position: absolute;
+  top: 0px;
+  left: -30px;
+  z-index: 200;
+  -webkit-animation: icons-home 7s ease 0.5s infinite alternate;
+          animation: icons-home 7s ease 0.5s infinite alternate;
+}
+
+.icon-contactless-hero {
+  position: absolute;
+  top: 350px;
+  left: 30px;
+  z-index: 200;
+  -webkit-animation: icons-home 7s ease 1s infinite alternate;
+          animation: icons-home 7s ease 1s infinite alternate;
+}
+@media screen and (max-width: 960px) {
+  .icon-contactless-hero {
+    top: 320px;
+    left: 120px;
+  }
+}
+
+.icon-mobile-hero {
+  position: absolute;
+  top: 150px;
+  left: -250px;
+  z-index: 200;
+  -webkit-animation: icons-home 7s ease 2.5s infinite alternate;
+          animation: icons-home 7s ease 2.5s infinite alternate;
+}
+@media screen and (max-width: 960px) {
+  .icon-mobile-hero {
+    top: 350px;
+    left: -100px;
+  }
+}
+
+@-webkit-keyframes icons-home {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, -40px, 0);
+  }
+}
+
+@keyframes icons-home {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, -40px, 0);
+  }
+}
+.glass,
+.fignu5 {
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+
+.bg-home-blur2 {
+  transform: translate3d(0, -150px, 0);
+}
+
+.bg-home-blur1 {
+  transform: translate3d(0, -100px, 0);
+}
+
+.bg-home-rect1 {
+  -webkit-animation: bg-home-rect 3s ease 0s infinite alternate;
+          animation: bg-home-rect 3s ease 0s infinite alternate;
+}
+
+.bg-home-rect2 {
+  -webkit-animation: bg-home-rect 3s ease 0.5s infinite alternate;
+          animation: bg-home-rect 3s ease 0.5s infinite alternate;
+}
+
+.bg-home-rect3 {
+  -webkit-animation: bg-home-rect 3s ease 1.5s infinite alternate;
+          animation: bg-home-rect 3s ease 1.5s infinite alternate;
+}
+
+.bg-home-rect4 {
+  -webkit-animation: bg-home-rect 3s ease 2s infinite alternate;
+          animation: bg-home-rect 3s ease 2s infinite alternate;
+}
+
+@-webkit-keyframes bg-home-rect {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 30px, 0);
+  }
+}
+
+@keyframes bg-home-rect {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 30px, 0);
   }
 }/*# sourceMappingURL=style.css.map */
